@@ -1,4 +1,4 @@
-group = "com.github.OpenEDGN.GradleKotlinTemplate"
+group = "com.github.ExplodingFKL"
 // 你可以修改此为自己的组织地址
 version = "last"
 // 你可以指定此为项目 版本号
@@ -12,9 +12,11 @@ buildscript {
         maven { url = project.uri("https://jitpack.io") }
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30")
     }
 }
+
+
 
 allprojects {
     repositories{

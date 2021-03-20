@@ -1,0 +1,17 @@
+.btn{
+    -fx-background-color: rgba(0,0,0,.01);
+    -fx-text-fill:  #cccccc;
+}
+
+VBox,HBox{
+    -fx-background-color: translate;
+}
+
+.input{
+    -fx-background-color: rgba(0,0,0,.01);
+}
+
+.text-area, .text-area .viewport, .text-area .content {
+    -fx-background-color: transparent ;
+}
+
