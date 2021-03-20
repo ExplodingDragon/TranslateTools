@@ -1,17 +1,31 @@
-.btn{
-    -fx-background-color: rgba(0,0,0,.01);
-    -fx-text-fill:  #cccccc;
+.btn {
+    -fx-background-color: rgba(0, 0, 0, .01);
+    -fx-text-fill: #cccccc;
 }
 
-VBox,HBox{
-    -fx-background-color: translate;
+
+VBox,HBox {
+    -fx-background-color: transparent;
 }
 
-.input{
-    -fx-background-color: rgba(0,0,0,.01);
+.input {
+    -fx-background-color: rgba(0, 0, 0, .01);
+}
+
+.text-area .scroll-bar:vertical:disabled {
+    -fx-opacity: 0;
 }
 
 .text-area, .text-area .viewport, .text-area .content {
-    -fx-background-color: transparent ;
+    -fx-background-color: transparent;
 }
 
+
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+.text-area .scroll-bar:horizontal {
+    -fx-pref-height: 1;
+    -fx-opacity: 0;
+}

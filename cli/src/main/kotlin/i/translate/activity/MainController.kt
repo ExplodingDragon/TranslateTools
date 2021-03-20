@@ -2,6 +2,8 @@ package i.translate.activity
 
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
+import javafx.fxml.Initializable
+import javafx.scene.control.ScrollBar
 import javafx.scene.control.TextArea
 import javafx.scene.input.MouseButton
 import javafx.scene.input.MouseEvent
@@ -14,9 +16,10 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 import java.net.http.HttpClient
 import java.nio.charset.Charset
+import java.util.*
 import kotlin.system.exitProcess
 
-class MainController {
+class MainController:Initializable {
 
 
     @FXML
@@ -124,5 +127,8 @@ class MainController {
     fun mousePressed(event: MouseEvent) {
         xOffset = stage.x - event.screenX
         yOffset = stage.y - event.screenY
+    }
+
+    override fun initialize(location: URL?, resources: ResourceBundle?) {
     }
 }
