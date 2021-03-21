@@ -8,6 +8,9 @@ import javafx.scene.layout.VBox
 import javafx.scene.paint.Color
 import javafx.stage.Stage
 import javafx.stage.StageStyle
+import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.concurrent.thread
 import kotlin.system.exitProcess
 
 class Main : Application() {
@@ -21,6 +24,16 @@ class Main : Application() {
         primaryStage.scene = scene
         primaryStage.isAlwaysOnTop = true
         primaryStage.show()
+        Thread {
+            while (true) {
+                TimeUnit.SECONDS.sleep(3)
+                javafx.application.Platform.runLater {
+                    if (!primaryStage.scene.window.isFocused){
+                        primaryStage.scene.window.requestFocus()
+                    }
+                }
+            }
+        }.start()
 
         primaryStage.setOnCloseRequest {
             exitProcess(0)
